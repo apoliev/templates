@@ -1,0 +1,16 @@
+[/]
+visible-name='Alex'
+login-shell=false
+cell-width-scale=1.0
+default-size-columns=80
+default-size-rows=24
+cursor-shape='underline'
+scroll-on-output=false
+use-theme-colors=false
+cell-height-scale=1.0
+use-transparent-background=true
+use-theme-transparency=false
+cursor-blink-mode='system'
+background-color='rgb(4,19,24)'
+background-transparency-percent=8
+audible-bell=true
