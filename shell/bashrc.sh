@@ -148,9 +148,9 @@ fi
 # CUSTOM
 alias update-apps='sudo apt update && sudo apt upgrade'
 
-alias lamp='$HOME/.config/scripts/lamp.sh'
-alias db='$HOME/.config/scripts/db.sh'
-alias conda-activate='source $HOME/.local/Scripts/conda.sh'
+alias lamp='$HOME/.local/scripts/lamp.sh'
+alias db='$HOME/.local/scripts/db.sh'
+
 # added by Anaconda3 2018.12 installer
 # >>> conda init >>>
 # !! Contents within this block are managed by 'conda init' !!
