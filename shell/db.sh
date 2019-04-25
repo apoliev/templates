@@ -37,7 +37,7 @@ stop() {
 }
 
 show_help() {
-    help_text="Usage: db [COMMAND]...[--dbms=[DBMS]]"
+    help_text="Usage: db [COMMAND]...[[DBMS]]"
     help_text="$help_text\nCommand's list:\n"
     help_text="$help_text\tstart - start db server;\n"
     help_text="$help_text\tstop - stop db server;\n"
@@ -49,14 +49,7 @@ show_help() {
 dbms="maria"
 
 if [ -n "$2" ]; then
-    if [ -n "$(echo $2 | grep -P ^--dbms=.+$)" ]; then
-        IFS="="
-        read -ra dbms <<< "$2"
-        dbms=${dbms[1]}
-    else
-        echo "Syntax error!"
-        exit 1
-    fi
+    dbms=$2
 fi
 
 case "$1" in
