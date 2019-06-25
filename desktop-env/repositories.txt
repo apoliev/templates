@@ -1,0 +1,3 @@
+themes - https://github.com/vinceliuice/Mojave-gtk-theme.git
+icons - https://github.com/vinceliuice/McMojave-circle.git
+cursor - https://www.opendesktop.org/p/1148692/
