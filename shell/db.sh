@@ -95,7 +95,7 @@ case "$1" in
         if [ -n "$2" ]; then
           default $2 "$config_file"
         else
-          echo "Need second parameter!"
+          cat "$config_file"
         fi
         ;;
 
