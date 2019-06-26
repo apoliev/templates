@@ -92,7 +92,11 @@ case "$1" in
         ;;
 
       default)
-        default $2 "$config_file"
+        if [ -n "$2" ]; then
+          default $2 "$config_file"
+        else
+          echo "Need second parameter!"
+        fi
         ;;
 
       --help)
