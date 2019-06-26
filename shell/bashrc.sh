@@ -80,7 +80,7 @@ git_branch() {
         read -ra branch <<< "$current_branch"
 
         branch=${branch[1]}
-        echo "[$branch]"
+        echo "($branch)"
     fi
 }
 
