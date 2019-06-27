@@ -1,39 +1,26 @@
 #!/bin/bash
 
+array_contains () { 
+    array="$1[@]"
+    seeking=$2
+    in=1
+    for element in "${!array}"; do
+        if [[ $element == $seeking ]]; then
+            in=0
+            break
+        fi
+    done
+    return $in
+}
+
 start() {
-    case "$1" in
-        mysql | maria)
-          sudo systemctl start mysql
-          echo "MariaDB started"
-          ;;
-
-        postgresql | postgres)
-          sudo systemctl start postgresql
-          echo "PostgreSQL started"
-          ;;
-
-        *)
-          echo "This DBMS is not supported!"
-          exit 1
-    esac
+  sudo systemctl start "$1"
+  echo "$1 started"
 }
 
 stop() {
-    case "$1" in
-        mysql | maria)
-            sudo systemctl stop mysql
-            echo "MariaDB stopped"
-            ;;
-
-        postgresql | postgres)
-            sudo systemctl stop postgresql
-            echo "PostgreSQL stopped"
-            ;;
-
-        *)
-        echo "This DBMS is not supported!"
-        exit 1
-    esac
+  sudo systemctl stop "$1"
+  echo "$1 stoped"
 }
 
 list() {
@@ -61,16 +48,22 @@ show_help() {
     printf "$help_text"
 }
 
-dbms_list=(maria postgres)
+dbms_list=(mariadb postgresql)
 config_file="$HOME/.db_runner"
+
 if [ -f "$config_file" ]; then
   dbms="$(cat $config_file)"
 else
-  dbms="maria"
+  dbms="mariadb"
 fi
 
 if [ -n "$2" ]; then
   dbms=$2
+fi
+
+if ! array_contains dbms_list "$dbms"; then
+  echo "DBMS is not supported!"
+  exit 1
 fi
 
 case "$1" in
