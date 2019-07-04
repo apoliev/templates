@@ -1,10 +1,13 @@
 [/]
 foreground-color='#B4B4B7B7B4B4'
-visible-name='Google Dark'
+visible-name='base16: Google (dark)'
 palette=['#1D1D1F1F2121', '#CCCC34342B2B', '#191988884444', '#FBFBA9A92222', '#39397171EDED', '#A3A36A6AC7C7', '#39397171EDED', '#C5C5C8C8C6C6', '#969698989696', '#CCCC34342B2B', '#191988884444', '#FBFBA9A92222', '#39397171EDED', '#A3A36A6AC7C7', '#39397171EDED', '#FFFFFFFFFFFF']
+use-transparent-background=true
 use-theme-colors=false
+use-theme-transparency=false
 allow-bold=true
 use-theme-background=false
 bold-color-same-as-fg=true
 bold-color='#B4B4B7B7B4B4'
 background-color='#1D1D1F1F2121'
+background-transparency-percent=6
