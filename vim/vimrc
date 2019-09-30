@@ -38,6 +38,7 @@ Plugin 'dyng/ctrlsf.vim'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'slim-template/vim-slim.git'
 Plugin 'vim-scripts/vim-auto-save.git'
+Plugin 'terryma/vim-multiple-cursors'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
