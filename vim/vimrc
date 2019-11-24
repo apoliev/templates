@@ -1,64 +1,9 @@
-"-------------Vundle (plugin manager)--------------
 set nocompatible
 filetype on
-
-"runtype
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
-
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-
-" The following are examples of different formats supported.
-" Keep Plugin commands between vundle#begin/end.
-" plugin on GitHub repo
-Plugin 'tpope/vim-fugitive'
-" plugin from http://vim-scripts.org/vim/scripts.html
-" Plugin 'L9'
-" Git plugin not hosted on GitHub
-Plugin 'git://git.wincent.com/command-t.git'
-" The sparkup vim script is in a subdirectory of this repo called vim.
-" Pass the path to set the runtimepath properly.
-Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-" Install L9 and avoid a Naming conflict if you've already installed a
-" different version somewhere else.
-" Plugin 'ascenator/L9', {'name': 'newL9'}
-
-" Plugins
-Plugin 'itchyny/lightline.vim'
-Plugin 'Dimercel/todo-vim'
-Plugin 'scrooloose/nerdtree'
-Plugin 'Xuyuanp/nerdtree-git-plugin'
-Plugin 'mattn/emmet-vim'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'dyng/ctrlsf.vim'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'slim-template/vim-slim.git'
-Plugin 'vim-scripts/vim-auto-save.git'
-Plugin 'terryma/vim-multiple-cursors'
-
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
-"
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-"
-" see :h vundle for more details or wiki for FAQ
-
-"Custom settings
+filetype plugin indent on
 syntax enable
 colorscheme desert
 
-filetype plugin indent on
 set number
 set tabstop=4
 set shiftwidth=4
@@ -68,11 +13,34 @@ set showmatch
 set laststatus=2
 set noshowmode
 set updatetime=100
+
+"-------------Vundle (plugin manager)--------------
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+    Plugin 'VundleVim/Vundle.vim'
+    Plugin 'tpope/vim-fugitive'
+    Plugin 'airblade/vim-gitgutter'
+    Plugin 'scrooloose/syntastic'
+    Plugin 'scrooloose/nerdtree'
+    Plugin 'scrooloose/nerdcommenter'
+    Plugin 'git://git.wincent.com/command-t.git'
+    Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+    Plugin 'itchyny/lightline.vim'
+    Plugin 'Dimercel/todo-vim'
+    Plugin 'Xuyuanp/nerdtree-git-plugin'
+    Plugin 'mattn/emmet-vim'
+    Plugin 'rking/ag.vim'
+    Plugin 'ctrlpvim/ctrlp.vim'
+    Plugin 'slim-template/vim-slim.git'
+    Plugin 'vim-scripts/vim-auto-save.git'
+    Plugin 'terryma/vim-multiple-cursors'
+    Plugin 'majutsushi/tagbar'
+    Plugin 'tpope/vim-rails'
+call vundle#end()
 let g:auto_save=1
 :autocmd Filetype ruby set softtabstop=2
 :autocmd Filetype ruby set sw=2
 :autocmd Filetype ruby set ts=2
-syntax enable
 
 " Maps
 nmap <F5> :TODOToggle<CR>
