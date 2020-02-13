@@ -12,7 +12,5 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
-source "$HOME/.zsh_conf/aliases.zsh"
-
 # rvm
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" 
