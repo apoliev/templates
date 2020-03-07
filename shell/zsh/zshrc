@@ -5,12 +5,9 @@ ZSH_THEME="bira-custom"
 
 plugins=(
   git
-  vi-mode   
   virtualenv
-  tmux
+  conda
+  rvm
 )
 
 source $ZSH/oh-my-zsh.sh
-
-# rvm
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" 
