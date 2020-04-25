@@ -1,16 +1,5 @@
 # Templates
 
-## Requirement
-
-- git
-- zsh
-- vim
-
-Optional:
-
-- [rvm](https://rvm.io/)
-- [conda](https://www.anaconda.com/products/individual)
-
 ## Preinstallation
 
 Load Oh My ZSH
@@ -19,4 +8,27 @@ Load Oh My ZSH
 sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
+## Installation
 
+Load zshrc with plugins
+
+```
+sh -c "./shell/zsh/install.sh"
+```
+
+Load tmux with plugins
+
+```
+sh -c "./shell/zsh/install.sh"
+```
+
+Load vimrc with plugins
+
+```
+sh -c "./vim/install.sh"
+```
+
+## Links
+
+- [rvm](https://rvm.io/)
+- [conda](https://www.anaconda.com/products/individual)
