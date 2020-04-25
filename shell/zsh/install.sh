@@ -1,8 +1,5 @@
 #!/bin/sh
 
-echo "Load Oh My ZSH"
-sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
 echo "Copy .zshrc"
 cp zshrc $HOME/.zshrc
 
