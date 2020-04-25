@@ -22,7 +22,7 @@ sh -c "./shell/zsh/install.sh"
 Load tmux with plugins
 
 ```
-sh -c "./shell/zsh/install.sh"
+sh -c "./shell/tmux/install.sh"
 ```
 
 Load vimrc with plugins
