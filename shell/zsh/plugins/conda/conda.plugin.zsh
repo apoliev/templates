@@ -6,17 +6,21 @@ function conda_prompt_info(){
 # disables prompt mangling in virtual_env/bin/activate
 export CONDA_DISABLE_PROMPT=1
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/alexey/.local/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/alexey/.local/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/alexey/.local/anaconda3/etc/profile.d/conda.sh"
+anaconda_dir="$HOME/.local/anaconda3"
+
+if [ -d ${anaconda_dir} ]; then
+    # >>> conda initialize >>>
+    # !! Contents within this block are managed by 'conda init' !!
+    __conda_setup="$('$anaconda_dir/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+    if [ $? -eq 0 ]; then
+        eval "$__conda_setup"
     else
-        export PATH="/home/alexey/.local/anaconda3/bin:$PATH"
+        if [ -f "$anaconda_dir/etc/profile.d/conda.sh" ]; then
+            . "$anaconda_dir/etc/profile.d/conda.sh"
+        else
+            export PATH="$anaconda_dir/bin:$PATH"
+        fi
     fi
+    unset __conda_setup
+    # <<< conda initialize <<<
 fi
-unset __conda_setup
-# <<< conda initialize <<<
