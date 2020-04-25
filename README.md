@@ -2,9 +2,12 @@
 
 ## Preinstallation
 
-Load Oh My ZSH
-
 ```
+sudo apt install zsh vim tmux
+
+chsh -s $(which zsh)
+
+# load oh my zsh
 sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
