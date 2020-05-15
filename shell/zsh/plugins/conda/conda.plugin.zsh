@@ -23,6 +23,7 @@ if [ -d ${anaconda_dir} ]; then
     fi
     unset __conda_setup
     # <<< conda initialize <<<
+    
+    conda activate base
 fi
 
-conda activate base

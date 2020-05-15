@@ -1,6 +1,8 @@
 function rvm_default() {
-  default=($(awk '/default/ {print}' $HOME/.rvm/config/alias | tr "=" "\n"))
-  echo "${ZSH_THEME_RUBY_PROMPT_PREFIX}${default[2]}${ZSH_THEME_RUBY_PROMPT_SUFFIX}"
+  if [ -f "$HOME/.rvm/config/alias" ]; then
+    default=($(awk '/default/ {print}' $HOME/.rvm/config/alias | tr "=" "\n"))
+    echo "${ZSH_THEME_RUBY_PROMPT_PREFIX}${default[2]}${ZSH_THEME_RUBY_PROMPT_SUFFIX}"
+  fi
 }
 
 # >>> rvm initialize >>>

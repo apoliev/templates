@@ -9,6 +9,8 @@ else
     local user_symbol='$'
 fi
 
+[ ! -x conda_prompt_info ] && function conda_prompt_info() { echo "" }
+
 function enviroments() {
   if [ -z "$(git_prompt_info)$(ruby_prompt_info)$(conda_prompt_info)$(virtualenv_prompt_info)" ]; then
     echo ""

@@ -1,3 +1,5 @@
+[ ! -x rvm_default ] && function rvm_default() { echo "" }
+
 function ruby_prompt_info() {
   prompt=$(rvm_prompt_info)
 
