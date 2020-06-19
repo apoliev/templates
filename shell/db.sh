@@ -14,13 +14,15 @@ array_contains () {
 }
 
 start() {
-  sudo systemctl start "$1"
-  echo "$1 started"
+  sudo systemctl start "$1" && echo "$1 started"
 }
 
 stop() {
-  sudo systemctl stop "$1"
-  echo "$1 stoped"
+  sudo systemctl stop "$1" && echo "$1 stoped"
+}
+
+status() {
+  sudo systemctl status "$1"
 }
 
 list() {
@@ -73,6 +75,10 @@ case "$1" in
 
       stop)
         stop "$dbms"
+        ;;
+
+      status)
+        status "$dbms"
         ;;
 
       restart)
