@@ -8,6 +8,7 @@ cp $DIR/zshrc $HOME/.zshrc
 echo "copy plugins"
 cp -a $DIR/plugins/conda $HOME/.oh-my-zsh/custom/plugins
 cp -a $DIR/plugins/rvm $HOME/.oh-my-zsh/custom/plugins
+cp -a $DIR/plugins/nvm $HOME/.oh-my-zsh/custom/plugins
 
 echo "copy themes"
 cp $DIR/themes/bira-custom.zsh-theme $HOME/.oh-my-zsh/custom/themes
