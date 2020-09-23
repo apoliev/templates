@@ -10,12 +10,16 @@ else
 fi
 
 type conda_prompt_info >> /dev/null || function conda_prompt_info() { echo "" }
+type nvm_prompt_info >> /dev/null || function nvm_prompt_info() { echo "" }
+type rvm_prompt_info >> /dev/null || function rvm_prompt_info() { echo "" }
+type virtualenv_prompt_info >> /dev/null || function virtualenv_prompt_info() { echo "" }
 
 function enviroments() {
-  if [ -z "$(git_prompt_info)$(ruby_prompt_info)$(conda_prompt_info)$(virtualenv_prompt_info)" ]; then
+  prompt="$(git_prompt_info)$(rvm_prompt_info)$(conda_prompt_info)$(virtualenv_prompt_info)$(nvm_prompt_info)"
+  if [ -z "$prompt" ]; then
     echo ""
   else
-    echo "[ $(git_prompt_info)$(ruby_prompt_info)$(conda_prompt_info)$(virtualenv_prompt_info)]"
+    echo "[ $prompt] "
   fi
 }
 
@@ -25,8 +29,7 @@ local envs='$(enviroments)'
 
 ZSH_THEME_RVM_PROMPT_OPTIONS="i v g"
 
-PROMPT="╭─${user_host}${current_dir}${envs}
-╰─%B${user_symbol}%b "
+PROMPT="${user_host}${current_dir}${envs}%B${user_symbol}%b "
 RPROMPT="%B${return_code}%b"
 
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[yellow]%}‹"
@@ -38,7 +41,11 @@ ZSH_THEME_RUBY_PROMPT_SUFFIX="› %{$reset_color%}"
 ZSH_THEME_CONDA_PREFIX="%{$fg[cyan]%}‹"
 ZSH_THEME_CONDA_SUFFIX="› %{$reset_color%}"
 
+ZSH_THEME_NVM_PREFIX="%{$fg[blue]%}‹"
+ZSH_THEME_NVM_SUFFIX="› %{$reset_color%}"
+
 ZSH_THEME_VIRTUAL_ENV_PROMPT_PREFIX="%{$fg[cyan]%}‹"
 ZSH_THEME_VIRTUAL_ENV_PROMPT_SUFFIX="› %{$reset_color%}"
+
 ZSH_THEME_VIRTUALENV_PREFIX=$ZSH_THEME_VIRTUAL_ENV_PROMPT_PREFIX
 ZSH_THEME_VIRTUALENV_SUFFIX=$ZSH_THEME_VIRTUAL_ENV_PROMPT_SUFFIX

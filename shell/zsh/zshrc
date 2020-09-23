@@ -5,9 +5,10 @@ ZSH_THEME="bira-custom"
 
 plugins=(
   git
-  virtualenv
-  conda
-  rvm
+  # virtualenv
+  # conda
+  # rvm
+  # nvm
 )
 
 source $ZSH/oh-my-zsh.sh
