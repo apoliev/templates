@@ -13,8 +13,7 @@ cp -a $DIR/plugins/rvm $HOME/.oh-my-zsh/custom/plugins
 cp -a $DIR/plugins/nvm $HOME/.oh-my-zsh/custom/plugins
 
 echo "copy themes"
-cp $DIR/themes/bira-custom.zsh-theme $HOME/.oh-my-zsh/custom/themes
+cp $DIR/themes/bira-shell.zsh-theme $HOME/.oh-my-zsh/custom/themes
 
 echo "copy base zsh scripts"
-cp $DIR/ruby_prompt.zsh $HOME/.oh-my-zsh/custom
 echo 'rvm_silence_path_mismatch_check_flag=1' > $HOME/.rvmrc
