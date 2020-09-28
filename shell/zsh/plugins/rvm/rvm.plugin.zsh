@@ -1,12 +1,19 @@
-function rvm_default() {
-  if [ -f "$HOME/.rvm/config/alias" ]; then
-    default=($(awk '/default/ {print}' $HOME/.rvm/config/alias | tr "=" "\n"))
-    echo "${ZSH_THEME_RUBY_PROMPT_PREFIX}${default[2]}${ZSH_THEME_RUBY_PROMPT_SUFFIX}"
-  fi
-}
+rvm_dir="$HOME/.rvm"
 
-# >>> rvm initialize >>>
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" 
+if [ -d "$rvm_dir" ]; then
+  function rvm_prompt() {
+    current="$(rvm current)"
+    default="$(rvm alias show default)"
+    if [ "$default" != "$current" ]; then
+      echo "${ZSH_THEME_RUBY_PROMPT_PREFIX}${current}${ZSH_THEME_RUBY_PROMPT_SUFFIX}"
+    fi
+  }
 
-[[ -d "$HOME/.rvm" ]] && export PATH="$PATH:$HOME/.rvm/bin"
-# <<< rvm initialize <<<
+  # >>> rvm initialize >>>
+  [[ -s "$rvm_dir/scripts/rvm" ]] && source "$rvm_dir/scripts/rvm" 
+
+  [[ -d "$rvm_dir" ]] && export PATH="$PATH:$rvm_dir/bin"
+  # <<< rvm initialize <<<
+else
+  echo "RVM directory not found"
+fi
