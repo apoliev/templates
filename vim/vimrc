@@ -2,7 +2,7 @@ set nocompatible
 filetype on
 filetype plugin indent on
 syntax enable
-colorscheme desert
+colorscheme slate
 
 set number
 set tabstop=4
@@ -13,6 +13,7 @@ set showmatch
 set laststatus=2
 set noshowmode
 set updatetime=100
+set clipboard=unnamedplus
 
 "-------------Vundle (plugin manager)--------------
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -36,8 +37,8 @@ call vundle#begin()
     Plugin 'terryma/vim-multiple-cursors'
     Plugin 'majutsushi/tagbar'
     Plugin 'tpope/vim-rails'
+    Plugin 'astashov/vim-ruby-debugger.git'
 call vundle#end()
-let g:auto_save=1
 :autocmd Filetype ruby set softtabstop=2
 :autocmd Filetype ruby set sw=2
 :autocmd Filetype ruby set ts=2
