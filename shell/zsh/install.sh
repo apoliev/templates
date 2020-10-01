@@ -2,8 +2,9 @@
 
 DIR="$(dirname "$(readlink -f "$0")")"
 
-echo "Create bak for zshrc"
+echo "Create zshrc.bak"
 mv $HOME/.zshrc $HOME/.zshrc.bak
+
 echo "Copy .zshrc"
 cp $DIR/zshrc $HOME/.zshrc
 
