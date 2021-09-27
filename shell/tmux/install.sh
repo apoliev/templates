@@ -4,6 +4,7 @@ DIR="$(dirname "$(readlink -f "$0")")"
 
 echo "Load plugins"
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+sudo apt install urlview -y
 
 echo "Create tmux.conf.bak"
 cp $HOME/.tmux.conf $HOME/.tmux.conf.bak
