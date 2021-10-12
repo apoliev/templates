@@ -1,4 +1,4 @@
-# Templates for vim
+# Templates for tmux
 
 ## Preinstall
 
