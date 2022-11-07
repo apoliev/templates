@@ -5,6 +5,7 @@ syntax enable
 colorscheme slate
 
 set number
+set cursorline
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
@@ -14,6 +15,8 @@ set laststatus=2
 set noshowmode
 set updatetime=100
 set clipboard=unnamedplus
+set incsearch
+set hlsearch
 
 "-------------Vundle (plugin manager)--------------
 set rtp+=~/.vim/bundle/Vundle.vim
