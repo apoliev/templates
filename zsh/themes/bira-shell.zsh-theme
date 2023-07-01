@@ -1,10 +1,16 @@
 local return_code="%(?..%{$fg[red]%}%? ↵%{$reset_color%})"
 
+if [ -z "$SSH_CLIENT" ]; then
+  local ssh_client=""
+else
+  local ssh_client="via ssh"
+fi
+
 if [[ $UID -eq 0 ]]; then
-    local user_host='%{$terminfo[bold]$fg[red]%}%n %{$reset_color%}'
+    local user_host='%{$terminfo[bold]$fg[red]%}%n $ssh_client %{$reset_color%}'
     local user_symbol='#'
 else
-    local user_host='%{$terminfo[bold]$fg[green]%}%n %{$reset_color%}'
+    local user_host='%{$terminfo[bold]$fg[green]%}%n $ssh_client %{$reset_color%}'
     local user_symbol='$'
 fi
 
