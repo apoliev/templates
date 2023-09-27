@@ -23,24 +23,18 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
     Plugin 'VundleVim/Vundle.vim'
     Plugin 'tpope/vim-fugitive'
-    Plugin 'airblade/vim-gitgutter'
+    Plugin 'github.com/airblade/vim-gitgutter.git'
     Plugin 'scrooloose/syntastic'
     Plugin 'scrooloose/nerdtree'
-    Plugin 'scrooloose/nerdcommenter'
     Plugin 'git://git.wincent.com/command-t.git'
-    Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
     Plugin 'itchyny/lightline.vim'
     Plugin 'Dimercel/todo-vim'
     Plugin 'Xuyuanp/nerdtree-git-plugin'
-    Plugin 'mattn/emmet-vim'
     Plugin 'rking/ag.vim'
     Plugin 'ctrlpvim/ctrlp.vim'
-    Plugin 'slim-template/vim-slim.git'
     Plugin 'vim-scripts/vim-auto-save.git'
     Plugin 'terryma/vim-multiple-cursors'
     Plugin 'majutsushi/tagbar'
-    Plugin 'tpope/vim-rails'
-    Plugin 'astashov/vim-ruby-debugger.git'
 call vundle#end()
 :autocmd Filetype ruby set softtabstop=2
 :autocmd Filetype ruby set sw=2
