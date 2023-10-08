@@ -23,7 +23,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
     Plugin 'VundleVim/Vundle.vim'
     Plugin 'tpope/vim-fugitive'
-    Plugin 'github.com/airblade/vim-gitgutter.git'
+    Plugin 'https://github.com/airblade/vim-gitgutter.git'
     Plugin 'scrooloose/syntastic'
     Plugin 'scrooloose/nerdtree'
     Plugin 'git://git.wincent.com/command-t.git'
