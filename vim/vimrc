@@ -26,7 +26,6 @@ call vundle#begin()
     Plugin 'https://github.com/airblade/vim-gitgutter.git'
     Plugin 'scrooloose/syntastic'
     Plugin 'scrooloose/nerdtree'
-    Plugin 'git://git.wincent.com/command-t.git'
     Plugin 'itchyny/lightline.vim'
     Plugin 'Dimercel/todo-vim'
     Plugin 'Xuyuanp/nerdtree-git-plugin'
@@ -35,6 +34,8 @@ call vundle#begin()
     Plugin 'vim-scripts/vim-auto-save.git'
     Plugin 'terryma/vim-multiple-cursors'
     Plugin 'majutsushi/tagbar'
+    Plugin 'junegunn/fzf'
+    Plugin 'junegunn/fzf.vim'
 call vundle#end()
 :autocmd Filetype ruby set softtabstop=2
 :autocmd Filetype ruby set sw=2
