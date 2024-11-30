@@ -29,8 +29,6 @@ call vundle#begin()
     Plugin 'itchyny/lightline.vim'
     Plugin 'Dimercel/todo-vim'
     Plugin 'Xuyuanp/nerdtree-git-plugin'
-    Plugin 'rking/ag.vim'
-    Plugin 'ctrlpvim/ctrlp.vim'
     Plugin 'vim-scripts/vim-auto-save.git'
     Plugin 'terryma/vim-multiple-cursors'
     Plugin 'majutsushi/tagbar'
@@ -44,3 +42,5 @@ call vundle#end()
 " Maps
 nmap <F5> :TODOToggle<CR>
 nmap <C-o> :NERDTreeToggle<CR>
+nmap <C-p> :Files<CR>
+nmap <C-f> :Rg<CR>

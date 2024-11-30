@@ -6,7 +6,6 @@ source $DIR/../shell/prompt_utils.sh
 
 # Install dependencies
 (prompt_txt 'Install dependencies...' &&
-sudo apt install bat -y &&
 sudo apt install fzf -y &&
 show_success 'Success') || show_error 'Error'
 

@@ -4,6 +4,11 @@ DIR="$(dirname "$(readlink -f "$0")")"
 
 source $DIR/../shell/prompt_utils.sh
 
+# Install dependencies
+(prompt_txt 'Loading dependencies' &&
+sudo apt install -y ripgrep &&
+show_success 'Success') || show_error 'Error'
+
 # Loading Vundle
 vundle_directory="$HOME/.vim/bundle/Vundle.vim"
 prompt_txt 'Loading Vundle...'
