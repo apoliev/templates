@@ -36,6 +36,7 @@ call vundle#begin()
     Plugin 'majutsushi/tagbar'
     Plugin 'junegunn/fzf'
     Plugin 'junegunn/fzf.vim'
+    Plugin 'w0rp/ale'
 call vundle#end()
 :autocmd Filetype ruby set softtabstop=2
 :autocmd Filetype ruby set sw=2
@@ -46,3 +47,22 @@ nmap <F5> :TODOToggle<CR>
 nmap <C-o> :NERDTreeToggle<CR>
 nmap <C-p> :Files<CR>
 nmap <C-f> :Rg<CR>
+
+" ALE settings
+let g:ale_fixers = {
+\   '*': ['remove_trailing_lines', 'trim_whitespace'],
+\   'javascript': ['prettier', 'eslint'],
+\   'ruby': ['rubocop']
+\}
+
+let g:ale_linters = {
+\   'ruby': ['rubocop']
+\}
+
+let g:ale_linters_explicit = 1
+let g:ale_completion_enabled = 1
+let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
+let g:ale_set_balloons=1
+let g:ale_hover_to_floating_preview=1
+let g:ale_sign_column_always = 1
+let g:ale_disable_lsp = 1
