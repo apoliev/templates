@@ -18,6 +18,11 @@ else
   (git clone https://github.com/VundleVim/Vundle.vim.git $vundle_directory && show_success 'Success') || show_error 'Error'
 fi
 
+# Loading theme
+(prompt_txt 'Loading theme' &&
+git clone --depth=1 https://github.com/josuegaleas/jay.git ~/.vim/pack/josuegaleas/start/jay &&
+show_success 'Success') || show_error 'Error'
+
 # Creating backup
 vimrc_file="$HOME/.vimrc"
 if [ -e $vimrc_file ]; then

@@ -2,7 +2,9 @@ set nocompatible
 filetype on
 filetype plugin indent on
 syntax enable
-colorscheme slate
+
+set background=dark
+colorscheme jay
 
 set number
 set cursorline
