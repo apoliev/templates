@@ -79,5 +79,5 @@ let g:ale_disable_lsp = 1
 
 " LanguageClient settings
 let g:LanguageClient_serverCommands = {
-\   'ruby': ['~/.rvm/gems/ruby-3.1.4/bin/solargraph', 'stdio'],
+\   'ruby': ['solargraph', 'stdio'],
 \ }
