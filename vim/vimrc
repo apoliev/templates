@@ -39,6 +39,7 @@ call vundle#begin()
     Plugin 'w0rp/ale'
     Plugin 'vim-ruby/vim-ruby'
     Plugin 'tpope/vim-rails'
+    Plugin 'tpope/vim-bundler'
     Plugin 'slim-template/vim-slim'
     Plugin 'autozimu/LanguageClient-neovim', {
     \   'branch': 'next',
@@ -79,5 +80,5 @@ let g:ale_disable_lsp = 1
 
 " LanguageClient settings
 let g:LanguageClient_serverCommands = {
-\   'ruby': ['solargraph', 'stdio'],
+\   'ruby': ['$(which ruby-lsp)', 'stdio'],
 \ }
