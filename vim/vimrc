@@ -55,7 +55,7 @@ call vundle#end()
 nmap <F5> :TODOToggle<CR>
 nmap <C-o> :NERDTreeToggle %<CR>
 nmap <C-p> :Files<CR>
-nmap <C-f> :Rg<CR>
+nmap <C-w>f :Rg<CR>
 nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
 nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
 
