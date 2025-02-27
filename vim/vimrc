@@ -53,7 +53,7 @@ call vundle#end()
 
 " Maps
 nmap <F5> :TODOToggle<CR>
-nmap <C-o> :NERDTreeToggle %<CR>
+nmap <C-o> :NERDTreeToggle<CR>
 nmap <C-p> :Files<CR>
 nmap <C-w>f :Rg<CR>
 nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
