@@ -5,11 +5,8 @@ ZSH_THEME="bira-shell"
 
 plugins=(
   git
+  mise
   fzf-tab
-  #virtualenv
-  #conda
-  #rvm
-  #nvm
 )
 
 source $ZSH/oh-my-zsh.sh

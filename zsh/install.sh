@@ -24,13 +24,6 @@ fi
 cp $DIR/zshrc $HOME/.zshrc &&
 show_success "Success\n") || (show_error 'Error' && exit 1)
 
-# Copying plugins
-(prompt_txt 'Copying plugins...' &&
-cp -a $DIR/plugins/conda $HOME/.oh-my-zsh/custom/plugins &&
-cp -a $DIR/plugins/rvm $HOME/.oh-my-zsh/custom/plugins &&
-cp -a $DIR/plugins/nvm $HOME/.oh-my-zsh/custom/plugins &&
-show_success "Success\n") || (show_error 'Error' && exit 1)
-
 # load vendor plugins
 fzf_tab_dir="$HOME/.oh-my-zsh/custom/plugins/fzf-tab"
 if [ -d $fzf_tab_dir ]; then
@@ -45,11 +38,5 @@ fi
 
 # Copying themes
 (prompt_txt 'Copying themes...' &&
-cp $DIR/themes/bira-shell.zsh-theme $HOME/.oh-my-zsh/custom/themes &&
+cp -a $DIR/themes $HOME/.oh-my-zsh/custom/themes &&
 show_success "Success\n") || (show_error 'Error' && exit 1)
-
-# Settings for plugins
-(prompt_txt 'Set configs for plugins...' &&
-echo "rvm_silence_path_mismatch_check_flag=1" > $HOME/.rvmrc &&
-echo "changeps1: false" > $HOME/.condarc &&
-show_success "Success") || (show_error 'Error' && exit 1)
