@@ -34,6 +34,11 @@ zsh &&
 curl https://mise.jdx.dev/install.sh | sh &&
 show_success "Success\n") || (show_error 'Error' && exit 1)
 
+# copy configs
+(prompt_txt "\nCopy configs..." &&
+mkdir -p $HOME/.config/mise && cp $DIR/configs/mise/config.toml $HOME/.config/mise/ &&
+show_success "Success\n") || (show_error 'Error' && exit 1)
+
 # Templates for shell
 prompt_txt "\nLoading shell configs..." && sh -c $DIR/shell/install.sh
 
