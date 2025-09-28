@@ -38,5 +38,5 @@ fi
 
 # Copying themes
 (prompt_txt 'Copying themes...' &&
-cp -a $DIR/themes $HOME/.oh-my-zsh/custom/themes &&
+cp -R $DIR/themes/* $HOME/.oh-my-zsh/custom/themes &&
 show_success "Success\n") || (show_error 'Error' && exit 1)
