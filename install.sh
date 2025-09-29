@@ -32,6 +32,7 @@ xclip \
 zlib1g-dev \
 zsh &&
 curl https://mise.jdx.dev/install.sh | sh &&
+mise install &&
 show_success "Success\n") || (show_error 'Error' && exit 1)
 
 # copy configs
