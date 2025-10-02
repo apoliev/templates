@@ -32,7 +32,6 @@ xclip \
 zlib1g-dev \
 zsh &&
 curl https://mise.jdx.dev/install.sh | sh &&
-mise install &&
 show_success "Success\n") || (show_error 'Error' && exit 1)
 
 # copy configs
@@ -45,6 +44,8 @@ prompt_txt "\nLoading shell configs..." && sh -c $DIR/shell/install.sh
 
 # Templates for zsh
 prompt_txt "\nLoading zsh configs..." && sh -c $DIR/zsh/install.sh
+
+sh -c "$HOME/.local/bin/mise install"
 
 # Templates for vim
 prompt_txt "\nLoading vim configs..." && sh -c $DIR/vim/install.sh
